@@ -62,6 +62,18 @@ docker logs -f kafka_producer
 docker logs -f kafka_producer
 ```
 
+## 🏗️ Architecture Diagram
+Below is the high-level architecture of the **multi-node Kafka cluster** deployed in this project.
+
+![Kafka Cluster Architecture](images/architecture.png)
+
+- **Zookeeper**: Manages Kafka brokers and coordinates leader election.
+- **Kafka Brokers**: Two brokers handle message storage and replication.
+- **Producer**: Sends messages to Kafka topics.
+- **Consumer**: Reads messages from Kafka topics.
+- **Docker Network**: All components communicate within an isolated network.
+
+
 ## 📜 Project Structure
 ```bash
 multi-node-kafka-cluster/
